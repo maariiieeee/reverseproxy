@@ -13,7 +13,8 @@ Throughout the development process, I encountered various challenges and issues.
 
 **Explain any design decisions you made, including limitations of the system.**
 
-Design Decisions:
+Design Decisions: 
+
 Concurrency Control: I use a semaphore-based approach to limit the number of concurrent requests my reverse proxy can handle. This helps prevent the system from becoming overwhelmed by too many requests at once.
 Asynchronous Processing: Each client request is handled in a separate goroutine, allowing for concurrent processing of multiple clients. This asynchronous approach enhances the efficiency of the reverse proxy.
 Error Handling: The code includes error handling for connection issues and data copying errors. This is crucial for robustness, ensuring that errors are logged for diagnosis and effective issue resolution.
