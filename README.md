@@ -16,13 +16,19 @@ Throughout the development process, I encountered various challenges and issues.
 Design Decisions: 
 
 Concurrency Control: I use a semaphore-based approach to limit the number of concurrent requests my reverse proxy can handle. This helps prevent the system from becoming overwhelmed by too many requests at once.
+
 Asynchronous Processing: Each client request is handled in a separate goroutine, allowing for concurrent processing of multiple clients. This asynchronous approach enhances the efficiency of the reverse proxy.
+
 Error Handling: The code includes error handling for connection issues and data copying errors. This is crucial for robustness, ensuring that errors are logged for diagnosis and effective issue resolution.
+
 Dynamic Configuration: Configuration settings are loaded from an external file using godotenv, enabling the modification of parameters like the maximum concurrent requests, server addresses, and the maximum number of retries without changing the source code.
+
 Exponential Backoff: The introduction of exponential backoff when retrying connections to the target server in case of errors enhances the system's resilience and reduces the impact of transient network issues.
 
 Limitations:
+
 Security: The code doesn't address security aspects like encryption (e.g., TLS/SSL), authentication, and authorization. For a production-ready system, securing communication and controlling access to the proxy should be considered.
+
 Logging and Monitoring: While errors and the status of transfer are logged, comprehensive logging and monitoring features could be added to help identify and address issues more effectively in a real-world scenario.
 
 
