@@ -7,6 +7,7 @@
 
 
 **What resources did you use to build your implementation?**
+
 I started by gaining a high-level understanding of the concept of a reverse proxy. I watched YouTube videos and read articles to learn about the role and functions of a reverse proxy in web architecture.
 To build the reverse proxy from scratch with low-level connections, I delved into socket programming. I researched and studied the fundamentals of socket-based TCP communication to establish connections between the reverse proxy and the target server, as well as between the reverse proxy and clients.
 Throughout the development process, I encountered various challenges and issues. I utilized online resources like Stack Overflow for troubleshooting and finding solutions to specific problems.
