@@ -1,5 +1,5 @@
 **How can someone build and run your code?**
-1) Edit the config.env file, with your desired configuration for the reverse proxy (proxy adress, backend adress, max concurrent requests and max retries)
+1) Edit the config.env file, with your desired configuration for the reverse proxy (proxy address, backend address, max concurrent requests and max retries)
 2) Run `go get` command in the root directory to get the required dependencies
 3) Run `go run reverse_proxy.go` to get the proxy software started
 4) Connect to the specified proxy address in `config.env` via a browser or Postman to test and use the reverse proxy
